@@ -13,6 +13,7 @@ public class Casella {
     enum color {blanc, negre};
     boolean negre;
     Fitxa tipo;
+    boolean ocupat;
     public Casella(color colorfitxa){
         //introduir colors
         
@@ -32,6 +33,7 @@ public class Casella {
     
     public void guardaFitxa(Fitxa guardar){
         this.tipo = guardar;
+        ocupat=true;
     }
 }
         

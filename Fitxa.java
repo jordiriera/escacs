@@ -19,6 +19,7 @@ public abstract class Fitxa {
     public boolean mort = false;
     public boolean negro;
     enum color{blanc, negre};
+    Fitxa guardarPosi[][];
     
     public void posicioInicial( int x, int y, color color){
          

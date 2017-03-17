@@ -10,7 +10,8 @@ package diversosjocs;
  * @author ifc33a
  */
 public class Tauler {
-       
+    
+   enum color{blanc, negre};
     enum selFitxes{Peon, Alfil, Torre, Cavall, Rei, Reina};
 
     final int col = 8;
@@ -18,6 +19,8 @@ public class Tauler {
 //ToDo: Traduccio lletres a numero per comunicar amb l'usuari 
 //ToDo: Cridar a la classe casella per saber quina peça hi ha a cada lloc (getpeça...)
     public Casella tauler[][] = new Casella[col][fil];
+    public Fitxa guardarFitxa[][]= new Fitxa[col][fil];
+    //public Casella guardarPosi[][] = new Casella[col][fil];
 
     public void generarTauler() {
         boolean negraPrimera;
@@ -30,6 +33,7 @@ public class Tauler {
                 negraPrimera = !negraPrimera;
             }
         }
+        
     }
 
     public void mostrarTauler() {
@@ -43,20 +47,34 @@ public class Tauler {
 
     }
     
-    
-    
-    public void colocaFitxes(int x, int y, selFitxes fitxes ){
-    
-        
-        
-        
-        
 
-//new diversosjocs.Peon(0, 0, Peon.color.negre){
-          
-        };
+    
+    public void generaFitxes(int x, int y, selFitxes fitxes, color color  ){
+        
+        switch(fitxes){
+            case Peon:
+                guardarFitxa[x][y] = (color == color.blanc)? new Peon(x,y,Peon.color.blanc):new Peon(x,y,Peon.color.negre);
+            case Torre:
+                guardarFitxa[x][y] = (color == color.blanc)? new Torre(x,y,Torre.color.blanc):new Torre(x,y,Torre.color.negre);
+            case Alfil:
+                guardarFitxa[x][y] = (color == color.blanc)? new Alfil(x,y,Alfil.color.blanc):new Alfil(x,y,Alfil.color.negre);
+            case Cavall:
+                guardarFitxa[x][y] = (color == color.blanc)? new Cavall(x,y,Cavall.color.blanc):new Cavall(x,y,Cavall.color.negre);
+            case Reina:
+                guardarFitxa[x][y] = (color == color.blanc)? new Reina(x,y,Reina.color.blanc):new Reina(x,y,Reina.color.negre);
+            case Rei:
+                guardarFitxa[x][y] = (color == color.blanc)? new Rei(x,y,Rei.color.blanc):new Rei(x,y,Rei.color.negre);
+        }
+
+        }
         
     
+    public void colocaFitxes(){
+        for (int i = 0;i<= fil;i++){
+        generaFitxes(1,y,selFitxes.Peon, color.blanc);
+        }
+        
+    }
     
     
     
