@@ -19,9 +19,7 @@ public class DiversosJocs {
         
         // TODO code application logic here
         
-        aa.generarTauler();
-        aa.mostrarTauler();
-        aa.generaAlgo();
+                
         aa.mostrarTauler();
     }
     

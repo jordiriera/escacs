@@ -26,6 +26,12 @@ public class Tauler {
     public Casella tauler[][] = new Casella[col][fil];
 
     //public Casella guardarPosi[][] = new Casella[col][fil];
+    
+    public Tauler(){
+        generarTauler();
+        generaFitxes();
+    }
+    
     public void generarTauler() {
         boolean negraPrimera;
 
@@ -52,26 +58,7 @@ public class Tauler {
 
     }
 
-    public void creaFitxes(int x, int y, selFitxes fitxes, color color) {
-
-        switch (fitxes) {
-            case Peon:
-                tauler[x][y].guardaFitxa((color == color.blanc) ? new Peon(x, y, Peon.color.blanc) : new Peon(x, y, Peon.color.negre));
-            case Torre:
-                tauler[x][y].guardaFitxa((color == color.blanc) ? new Torre(x, y, Torre.color.blanc) : new Torre(x, y, Torre.color.negre));
-            case Alfil:
-                tauler[x][y].guardaFitxa((color == color.blanc) ? new Alfil(x, y, Alfil.color.blanc) : new Alfil(x, y, Alfil.color.negre));
-            case Cavall:
-                tauler[x][y].guardaFitxa((color == color.blanc) ? new Cavall(x, y, Cavall.color.blanc) : new Cavall(x, y, Cavall.color.negre));
-            case Reina:
-                tauler[x][y].guardaFitxa((color == color.blanc) ? new Reina(x, y, Reina.color.blanc) : new Reina(x, y, Reina.color.negre));
-            case Rei:
-                tauler[x][y].guardaFitxa((color == color.blanc) ? new Rei(x, y, Rei.color.blanc) : new Rei(x, y, Rei.color.negre));
-        }
-
-    }
-
-    public void generaAlgo() {
+    public void generaFitxes() {
 
         for (int y = 0; y < fil; y++) {
             for (int x = 0; x < col; x++) {
@@ -115,11 +102,27 @@ public class Tauler {
                 if (y == 6){
                     tauler[x][y].guardaFitxa(new Peon(x, y, Fitxa.color.negre));
                     }
-                    
-                
-
             }
-
         }
     }
 }
+
+/*
+    public void creaFitxes(int x, int y, selFitxes fitxes, color color) {
+
+        switch (fitxes) {
+            case Peon:
+                tauler[x][y].guardaFitxa((color == color.blanc) ? new Peon(x, y, Peon.color.blanc) : new Peon(x, y, Peon.color.negre));
+            case Torre:
+                tauler[x][y].guardaFitxa((color == color.blanc) ? new Torre(x, y, Torre.color.blanc) : new Torre(x, y, Torre.color.negre));
+            case Alfil:
+                tauler[x][y].guardaFitxa((color == color.blanc) ? new Alfil(x, y, Alfil.color.blanc) : new Alfil(x, y, Alfil.color.negre));
+            case Cavall:
+                tauler[x][y].guardaFitxa((color == color.blanc) ? new Cavall(x, y, Cavall.color.blanc) : new Cavall(x, y, Cavall.color.negre));
+            case Reina:
+                tauler[x][y].guardaFitxa((color == color.blanc) ? new Reina(x, y, Reina.color.blanc) : new Reina(x, y, Reina.color.negre));
+            case Rei:
+                tauler[x][y].guardaFitxa((color == color.blanc) ? new Rei(x, y, Rei.color.blanc) : new Rei(x, y, Rei.color.negre));
+        }
+
+    }*/
