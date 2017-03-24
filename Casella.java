@@ -12,7 +12,7 @@ package diversosjocs;
 public class Casella {
     enum color {blanc, negre};
     boolean negre;
-    Fitxa tipo;
+    Fitxa fitxes;
     boolean ocupat;
     public Casella(color colorfitxa){
         //introduir colors
@@ -21,18 +21,16 @@ public class Casella {
             }
     
     public String toString(){
-        return (negre)? "N":"B";
+        if (!ocupat){
+        return (negre)? "☒" : "☐";
+        }else {
+            return fitxes.toString();
+        }
     }
     
-    public void setpeca(){
-        
-    }
-    public void getpeca(){
-        
-    }
     
     public void guardaFitxa(Fitxa guardar){
-        this.tipo = guardar;
+        this.fitxes = guardar;
         ocupat=true;
     }
 }

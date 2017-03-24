@@ -20,6 +20,9 @@ public class Peon extends diversosjocs.Fitxa {
         xinicial = x;
         yinicial = y;
         negro = (color == color.negre);
+        figura  = (negro) ? "♟" : "♙" ;
     }
+    
+    
     
 }

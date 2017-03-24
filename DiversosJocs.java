@@ -21,6 +21,8 @@ public class DiversosJocs {
         
         aa.generarTauler();
         aa.mostrarTauler();
+        aa.generaAlgo();
+        aa.mostrarTauler();
     }
     
 }
