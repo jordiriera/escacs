@@ -11,7 +11,6 @@ package diversosjocs;
  */
 public class Peon extends diversosjocs.Fitxa {
     
-    enum color{blanc, negre};
     int xinicial;
     int yinicial;
     
@@ -19,8 +18,8 @@ public class Peon extends diversosjocs.Fitxa {
     
         xinicial = x;
         yinicial = y;
-        negro = (color == color.negre);
-        figura  = (negro) ? "♟" : "♙" ;
+        negre = (color == color.negre);
+        figura  = (negre) ? "♟" : "♙" ;
     }
     
     

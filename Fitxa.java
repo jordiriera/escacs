@@ -17,7 +17,7 @@ public abstract class Fitxa {
     int xinicial, yinicial, x, y;
     
     public boolean mort = false;
-    public boolean negro;
+    public boolean negre;
     enum color{blanc, negre};
     Fitxa guardarPosi[][];
     String figura;
@@ -27,7 +27,7 @@ public abstract class Fitxa {
     
         xinicial = x;
         yinicial = y;
-        negro = (color == color.negre);
+        negre = (color == color.negre);
      
         
         

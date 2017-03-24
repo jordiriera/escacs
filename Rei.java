@@ -12,7 +12,6 @@ package diversosjocs;
 public class Rei extends diversosjocs.Fitxa{
 
    
-    enum color{blanc, negre};
     int xinicial;
     int yinicial;
     
@@ -20,8 +19,8 @@ public class Rei extends diversosjocs.Fitxa{
     
         xinicial = x;
         yinicial = y;
-        negro = (color == color.negre);
-        
+        negre = (color == color.negre);
+        figura = (negre)? "♚":"♔";
         
     }
     
