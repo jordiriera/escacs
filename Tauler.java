@@ -105,6 +105,12 @@ public class Tauler {
             }
         }
     }
+
+public void seleccionaFitxa(int x, int y){
+        
+    
+}
+
 }
 
 /*

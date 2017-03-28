@@ -13,7 +13,7 @@ public class Casella {
     enum color {blanc, negre};
     boolean negre;
     Fitxa fitxes;
-    boolean ocupat;
+    boolean ocupat = false;
     public Casella(color colorfitxa){
         //introduir colors
         
